@@ -13,6 +13,12 @@
     font-family: 'League Spartan', sans-serif;
     /*WEIGHTS:400-500-700*/
 }
+body{
+    background-image: url(../images/bg-pattern-top-mobile.svg),url(../images/bg-pattern-bottom-mobile.svg);
+    background-size:auto;
+        background-repeat:no-repeat;
+        background-position:top, bottom;
+}
 
 h1{
     color: var(--very-dark-magenta);
@@ -37,10 +43,21 @@ h1{
 }
 
 @media screen and (min-width: 768px) and (max-width: 2056px) {
+    body{
+        background-image: url(../images/bg-pattern-bottom-desktop.svg),url(../images/bg-pattern-top-desktop.svg);
+        background-size:auto;
+        background-repeat:no-repeat;
+        background-position:top;
+    }
+    main{
+        width: 1400px;
+        margin: 0 auto;
+    }
     .responsive{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
     }
     .head{
         display: flex;
@@ -154,6 +171,9 @@ h1{
 .user-experiencies{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+    margin:0 auto;
     /* margin-left: 100px; */
 }
 .card{
